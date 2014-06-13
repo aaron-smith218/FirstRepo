@@ -1,11 +1,51 @@
 <!Doctype HTML>
 <HTML>
 	<Header>
-		<Title>Git Test Changed</Title>
+		<Title>jQuery Test</Title>
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#hide").click(function(){
+					$("#box").hide(5000);
+				});
+				
+				$("#show").click(function(){
+					$("#box").show(5000);
+				});
+				
+				$("#toggle").click(function(){
+					$("#box").toggle(5000);
+				});
+				
+				$("#slideup").click(function(){
+					$("#box").slideUp(5000);
+				});
+				
+				$("#slidedown").click(function(){
+					$("#box").slideDown(5000);
+				});
+			});
+		</script>
+		<style>
+			#box {
+				width: 400px;
+				height: 300px;
+				background-color: blue;
+			}
+		</style>
 	</Header>
 	<Body>	
-		<h1>Git Test Changed</h1>
-		<div>Some content in a div</div>
-		<p>This is a web change</p>
+	
+		<h1>jQuery Test</h1>
+		<p>Buttons Here</p>
+		
+		<ul>
+			<li id="hide"><a href="#">Hide</a></li>
+			<li id="show"><a href="#">Show</a></li>
+			<li id="toggle"><a href="#">Toggle</a></li>
+			<li id="slideup"><a href="#">Slide Up</a></li>
+			<li id="slidedown"><a href="#">Slide Down</a></li>
+		</ul>
+		<div id="box">Testing jQuery functions</div>
 	</Body>
 </HTML>
